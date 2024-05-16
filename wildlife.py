@@ -1,4 +1,6 @@
 import requests
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.retry import Retry
 
 def get_species_list(coordinate, radius):
     """
@@ -23,13 +25,16 @@ def get_species_list(coordinate, radius):
     return species_list
 
 def get_surveys_by_species(coordinate, radius, taxonid):
+    session = requests.Session()
+    retries = Retry(total=5, backoff_factor=0.1, status_forcelist=[500, 502, 503, 504])
+    session.mount('https://', HTTPAdapter(max_retries=retries))
     base_url = "https://apps.des.qld.gov.au/species/"
     params = {
         'op': 'getsurveysbyspecies',
         'taxonid': taxonid,
         'circle': f"{coordinate[0]},{coordinate[1]},{radius}"
     }
-    response = requests.get(base_url, params=params)
+    response = session.get(base_url, params=params)
     data = response.json()
     surveys = [survey['properties'] for survey in data['features']]
     return surveys
@@ -42,3 +47,4 @@ def sort_by_date(sightings):
 
 # Test the function by printing the species list for a specific coordinate and radius
 print(get_species_list((-16.92, 145.777), 100000))
+
