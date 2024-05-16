@@ -8,4 +8,4 @@
 
 ## Project Report
 
-- [Project Plan](./report.md)
+- [Report](./report.md)
