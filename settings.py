@@ -4,11 +4,11 @@ def display_menu():
     """
     print("Help\n====")
     print("The following commands are recognised.")
-    print("Display help wildlife> help")
-    print("Display animal species in a city wildlife> species <CityName>")
-    print("Display animal sightings in a city wildlife> sightings <CityName> <TaxonID>")
-    print("Display venomous species wildlife> species <CityName> venomous")
-    print("Exit the application wildlife> exit")
+    print("Display help                         wildlife> help")
+    print("Display animal species in a city     wildlife> species ")
+    print("Display animal sightings in a city   wildlife> sightings Cairns 1039")
+    print("Display venomous species             wildlife> species Cairns venomous")
+    print("Exit the application                 wildlife> exit")
 
 def search_species(city):
     """
@@ -57,6 +57,7 @@ def gps(city):
     return {"latitude": -27.4689682, "longitude": 153.0234991}
 
 def main():
+    display_menu()
     while True:
         command = input("wildlife> ").strip().lower()
         parts = command.split()
