@@ -20,5 +20,9 @@ def gps_coordinate(city):
     data = response.json()[0]
     return {'latitude': float(data['lat']), 'longitude': float(data['lon'])}
 
+# Call the function and print the result
+city = "Cairns"
+coordinates = gps_coordinate(city)
+print("GPS Coordinates for", city, ":", coordinates)
 # Assert statements for testing
 # assert gps_coordinate("Cairns") == {'latitude': -16.92, 'longitude': 145.777}, "Test failed for Cairns"
