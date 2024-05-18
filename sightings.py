@@ -57,7 +57,7 @@ def gps(city):
     return {"latitude": -27.4689682, "longitude": 153.0234991}
 
 def main():
-     display_menu()
+    display_menu()
     while True:
         command = input("wildlife> ").strip().lower()
         parts = command.split()
