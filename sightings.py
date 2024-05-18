@@ -1,3 +1,6 @@
+# Muhammad Jaleed (12248353)
+# Jeneesh Patel (1225422)
+
 def display_menu():
     """
     Display the menu options to the user.
