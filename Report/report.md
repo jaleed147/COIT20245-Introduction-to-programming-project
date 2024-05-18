@@ -15,6 +15,7 @@ The code demonstrates the following functionalities:<br />
 + Species Search: Retrieves a pre-defined list of species for a city (currently not using a web service). Can filter venomous species from the list. (settings.py)<br />
 + Animal Sightings: Retrieves a stubbed list of animal sightings with basic information. (settings.py)<br />
 + Geolocation (Stub): Returns a predefined GPS coordinate for a city regardless of the input city. (settings.py)<br />
+
 The application adheres to the assignment by providing a basic framework for user interaction and data display.  However, it requires further development to integrate external web services for real-time geolocation and wildlife data retrieval.<br />
 
 
