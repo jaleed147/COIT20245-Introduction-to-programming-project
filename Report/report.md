@@ -33,13 +33,10 @@ However, there's room for improvement with:<br />
 + Error Handling: More comprehensive error handling is needed for web service interactions and potential runtime issues. (wildlife.py, sighting.py) <br />
 + Stub Integration: The stub functions should be replaced with actual calls to external web services once development progresses. (settings.py)<br />
 
-### 3. Limitations
+### 3. Untaught Language Features
 
-- **Stub Data**: For some functions, stub data was used due to the lack of access to live data during the development phase.
-- **Service Limitations**: The web services used have rate limits and availability constraints, which can affect the application's performance and reliability.
-- **Error Handling**: Limited error handling has been implemented. More robust error handling would be needed for a production-level application.
-
----
+The code primarily uses core Python functionalities and avoids untaught language features.  This makes the code easier to understand and maintain.
+The code represents a solid foundation for the wildlife application.  It demonstrates good coding practices in terms of naming, documentation, and basic error handling. However, further development is needed to integrate external web services, enhance error handling, and implement functionalities like sorting sightings by date.
 
 ### 4. Test Results
 
