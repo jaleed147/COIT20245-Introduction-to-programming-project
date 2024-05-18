@@ -3,6 +3,7 @@ from wildlife import get_species_list
 from wildlife import get_surveys_by_species
 from wildlife import sort_by_date
 
+
 def gps(city):
     """
     Fetch GPS coordinates for a given city.
@@ -16,8 +17,8 @@ def gps(city):
     return gps_coordinate(city)
 
 # Test the function by printing the GPS coordinates of a city
-print(gps("Cairns"))
-print(gps("Cairns Regional"))
+# print(gps("Cairns"))
+# print(gps("Cairns Regional"))
 
 RADIUS = 100000 
 def search_species(city):
