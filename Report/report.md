@@ -47,9 +47,9 @@ Help
 The following commands are recognised.
 Display help wildlife> help
 Exit the application wildlife> exit
-Display animal species in a city wildlife> species <city>
-Display animal sightings in a city wildlife> sightings <city> <taxonid>
-Display venomous species wildlife> species <city> venomous
+Display animal species in a city wildlife> species Tinaroo
+Display animal sightings in a city wildlife> sightings Tinaroo 860
+Display venomous species wildlife> species Tinaroo venomous
 ```
 
 #### 4.2 Species in a City
