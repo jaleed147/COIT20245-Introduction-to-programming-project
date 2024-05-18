@@ -1,3 +1,6 @@
+# Muhammad Jaleed (12248353)
+# Jeneesh Patel (1225422)
+
 import requests
 
 def gps_coordinate(city):
