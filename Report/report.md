@@ -54,21 +54,21 @@ Display venomous species wildlife> species Tinaroo venomous
 
 #### 4.2 Species in a City
 ```text
-wildlife> species brisbane
-Species: dolphin, PestStatus: Nil
-Species: snake, PestStatus: Venomous
+wildlife> species Tinaroo
+dolphin - Nil
+snake - Venomous
 ```
 
 #### 4.3 Sightings in a City
 ```text
-wildlife> sightings brisbane 1
+wildlife> sightings Tinaroo 860
 Date: 1999-11-15, Location: Tinaroo
 ```
 
 #### 4.4 Venomous Species in a City
 ```text
-wildlife> species brisbane venomous
-Species: snake, PestStatus: Venomous
+wildlife> species Tinaroo venomous
+snake - Venomous
 ```
 
 ---
