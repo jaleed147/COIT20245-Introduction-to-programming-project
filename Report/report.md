@@ -86,13 +86,8 @@ snake - Venomous
 + The wildlife.py file retrieves species lists from a web service using the requests library with retry logic for potential errors. However, functionality needs completion for retrieving specific sightings based on TaxonID.
 + The sighting.py file utilizes functions from other modules and implements sorting for displaying animal sightings.
 + The sightings.py file utilizes functions like display menu, display sightings and display venomous <br />
+
 By focusing on web service integration,  error handling, and completing functionalities like displaying sightings based on TaxonID, the application can achieve a more robust and feature-rich state.
-
----
-
-### 7. Conclusion
-
-This assignment provided a valuable learning experience in developing a Python application that interacts with web services. The project successfully implemented the required functionalities, demonstrating the ability to fetch and analyze wildlife data. Further improvements and enhancements can be made to increase the robustness and user-friendliness of the application.
 
 ---
 
