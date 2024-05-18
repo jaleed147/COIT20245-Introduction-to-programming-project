@@ -5,9 +5,9 @@ def display_menu():
     print("Help\n====")
     print("The following commands are recognised.")
     print("Display help wildlife> help")
-    print("Display animal species in a city wildlife> species Cairns")
-    print("Display animal sightings in a city wildlife> sightings Cairns 1039")
-    print("Display venomous species wildlife> species Cairns venomous")
+    print("Display animal species in a city wildlife> species Tinaroo")
+    print("Display animal sightings in a city wildlife> sightings Tinaroo 860")
+    print("Display venomous species wildlife> species Tinaroo venomous")
     print("Exit the application wildlife> exit")
 
 def search_species(city):
