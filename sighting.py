@@ -1,3 +1,6 @@
+# Muhammad Jaleed (12248353)
+# Jeneesh Patel (1225422)
+
 from nominatim import gps_coordinate
 from wildlife import get_species_list 
 from wildlife import get_surveys_by_species
