@@ -8,9 +8,15 @@
 
 ---
 
-### 1. Overview
+### 1. Functionality and Adherence
 
-The objective of this assignment was to develop a Python application to fetch and analyze data from web services related to Queensland wildlife sightings. The application allows users to query for animal species in a city, animal sightings in a city, and venomous species in a city. Additionally, the application integrates with a GPS service to fetch geographical coordinates for cities.
+The code demonstrates the following functionalities:
+•	Menu System: Displays a menu with options for help, displaying species in a city (limited functionality), displaying animal sightings (limited functionality), and exiting the application. (settings.py)
+•	Species Search: Retrieves a pre-defined list of species for a city (currently not using a web service). Can filter venomous species from the list. (settings.py)
+•	Animal Sightings: Retrieves a stubbed list of animal sightings with basic information. (settings.py)
+•	Geolocation (Stub): Returns a predefined GPS coordinate for a city regardless of the input city. (settings.py)
+The application adheres to the assignment by providing a basic framework for user interaction and data display.  However, it requires further development to integrate external web services for real-time geolocation and wildlife data retrieval.
+
 
 ---
 
