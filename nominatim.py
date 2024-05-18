@@ -17,6 +17,7 @@ def gps_coordinate(city):
     base_url = "https://nominatim.openstreetmap.org/search"
     params = {'q': city, 'format': 'json'}
     response = requests.get(base_url, params=params)
+    print(response)
     data = response.json()[0]
     return {'latitude': float(data['lat']), 'longitude': float(data['lon'])}
 
