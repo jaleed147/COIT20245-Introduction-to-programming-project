@@ -1,3 +1,6 @@
+# Muhammad Jaleed (12248353)
+# Jeneesh Patel (1225422)
+
 import requests
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
