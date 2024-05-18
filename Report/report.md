@@ -2,8 +2,8 @@
 ## COIT20245 - Introduction to Programming
 ### Assignment 2: Python Application for Wildlife Sighting Analysis
 ### Group Members:
-          ###  Muhammad Jaleed (12248353)
-           ### Jeneesh Patel (1225422)
+          Muhammad Jaleed (12248353)
+          Jeneesh Patel (1225422)
 
 
 ---
