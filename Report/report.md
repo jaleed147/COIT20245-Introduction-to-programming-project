@@ -21,153 +21,17 @@ The application adheres to the assignment by providing a basic framework for use
 
 ---
 
-### 2. Functionalities Implemented
+### 2. Code Quality
 
-#### 2.1 Display Help Menu
+The code exhibits good practices in several areas:<br />
++ Meaningful Names: Variable and function names are descriptive and reflect their purpose (e.g., gps_coordinate, get_species_list). <br />
++ Documentation: Docstrings are included for most functions explaining their purpose and parameters. (settings.py, wildlife.py) <br />
++ Error Handling (Basic): Basic error checks are implemented for user input validation (e.g., checking for valid menu options). (settings.py)<br />
++ Code Layout: The code is generally well-formatted and easy to read.<br />
 
-Implemented a function to display a help menu with the recognized commands.
-
-```python
-def display_menu():
-    print("Help\n====")
-    print("The following commands are recognised.")
-    print("Display help wildlife> help")
-    print("Exit the application wildlife> exit")
-    print("Display animal species in a city wildlife> species <city>")
-    print("Display animal sightings in a city wildlife> sightings <city> <taxonid>")
-    print("Display venomous species wildlife> species <city> venomous")
-```
-
-#### 2.2 Handle User Input
-
-Implemented the main function to handle user input and call the appropriate functions based on the commands entered.
-
-```python
-def main():
-    display_menu()
-    while True:
-        command = input("wildlife> ").strip().lower()
-        if command == "help":
-            display_menu()
-        elif command == "exit":
-            break
-        elif command.startswith("species "):
-            _, city = command.split(" ", 1)
-            species_list = search_species(city)
-            display_species(species_list)
-        elif command.startswith("sightings "):
-            _, details = command.split(" ", 1)
-            city, taxonid = details.split(" ")
-            sightings = search_sightings(taxonid, city)
-            display_sightings(sightings)
-        else:
-            print("Invalid command, type 'help' for a list of commands.")
-```
-
-#### 2.3 List Species in a City
-
-Implemented a stub function to return a list of species and a function to display them.
-
-```python
-def search_species(city):
-    return [
-        {"Species": {"AcceptedCommonName": "dolphin", "PestStatus": "Nil"}},
-        {"Species": {"AcceptedCommonName": "snake", "PestStatus": "Venomous"}}
-    ]
-
-def display_species(species_list):
-    for species in species_list:
-        print(f"Species: {species['Species']['AcceptedCommonName']}, PestStatus: {species['Species']['PestStatus']}")
-```
-
-#### 2.4 List Animal Sightings in a City
-
-Implemented a stub function to return a list of sightings and a function to display them.
-
-```python
-def search_sightings(taxonid, city):
-    return [{"properties": {"StartDate": "1999-11-15", "LocalityDetails": "Tinaroo"}}]
-
-def display_sightings(sightings):
-    for sighting in sightings:
-        print(f"Date: {sighting['properties']['StartDate']}, Location: {sighting['properties']['LocalityDetails']}")
-```
-
-#### 2.5 List Venomous Species in a City
-
-Implemented a function to filter and display venomous species.
-
-```python
-def filter_venomous(species_list):
-    return [species for species in species_list if species['Species']['PestStatus'] == 'Venomous']
-```
-
-#### 2.6 Integrate GPS Web Service
-
-Implemented a module to fetch GPS coordinates using the Nominatim API.
-
-```python
-# nominatim.py
-import requests
-
-def gps_coordinate(city):
-    url = f"https://nominatim.openstreetmap.org/search?q={city}&format=json"
-    response = requests.get(url).json()
-    if response:
-        lat = float(response[0]['lat'])
-        lon = float(response[0]['lon'])
-        return {'latitude': lat, 'longitude': lon}
-    return None
-```
-
-#### 2.7 Fetch Species List Using Web Service
-
-Integrated the Queensland Government's Species web service to fetch species data.
-
-```python
-# wildlife.py
-import requests
-
-def get_species_list(coordinate, radius):
-    lat, lon = coordinate['latitude'], coordinate['longitude']
-    url = f"https://apps.des.qld.gov.au/species/?op=getspecieslist&kingdom=animals&circle={lat},{lon},{radius}"
-    response = requests.get(url).json()
-    return response["SpeciesSightingSummariesContainer"]["SpeciesSightingSummary"]
-```
-
-#### 2.8 Fetch Surveys by Species Using Web Service
-
-Implemented a function to fetch survey data for specific species.
-
-```python
-# wildlife.py
-def get_surveys_by_species(coordinate, radius, taxonid):
-    lat, lon = coordinate['latitude'], coordinate['longitude']
-    url = f"https://apps.des.qld.gov.au/species/?op=getsurveysbyspecies&taxonid={taxonid}&circle={lat},{lon},{radius}"
-    response = requests.get(url).json()
-    return [survey for survey in response['features'] if survey['properties']['SiteCode'] == 'INCIDENTAL']
-```
-
-#### 2.9 Sort and Display Sightings by Date
-
-Implemented functions to sort sightings by date and display them.
-
-```python
-from datetime import datetime
-
-def earliest(sightings):
-    return min(sightings, key=lambda x: datetime.strptime(x['properties']['StartDate'], '%Y-%m-%d'))
-
-def sort_by_date(sightings):
-    return sorted(sightings, key=lambda x: datetime.strptime(x['properties']['StartDate'], '%Y-%m-%d'))
-
-def display_sightings(sightings):
-    sorted_sightings = sort_by_date(sightings)
-    for sighting in sorted_sightings:
-        print(f"Date: {sighting['properties']['StartDate']}, Location: {sighting['properties']['LocalityDetails']}")
-```
-
----
+However, there's room for improvement with:<br />
++ Error Handling: More comprehensive error handling is needed for web service interactions and potential runtime issues. (wildlife.py, sighting.py) <br />
++ Stub Integration: The stub functions should be replaced with actual calls to external web services once development progresses. (settings.py)<br />
 
 ### 3. Limitations
 
