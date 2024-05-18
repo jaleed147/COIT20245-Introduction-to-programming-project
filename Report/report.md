@@ -1,7 +1,7 @@
 
 ## COIT20245 - Introduction to Programming
 ### Assignment 2: Python Application for Wildlife Sighting Analysis
-### Student Name: [Your Name]
+### Student Name: Muhammad Jaleed
 ### Student ID: [Your Student ID]
 
 ---
