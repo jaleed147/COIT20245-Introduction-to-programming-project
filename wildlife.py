@@ -47,4 +47,3 @@ def sort_by_date(sightings):
 
 # Test the function by printing the species list for a specific coordinate and radius
 print(get_species_list((-16.92, 145.777), 100000))
-
