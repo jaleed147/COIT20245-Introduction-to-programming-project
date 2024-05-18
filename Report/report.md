@@ -80,12 +80,13 @@ snake - Venomous
 
 ---
 
-### 6. Future Enhancements
+### 6. Additional Notes
 
-- **Improved Error Handling**: Implement comprehensive error handling to manage API failures and invalid inputs gracefully.
-- **User Interface**: Develop a graphical user interface (GUI) for better user interaction.
-- **Extended Functionality**: Add more features such as filtering by date ranges, more detailed species information, and integration with additional data sources.
-- **Optimization**: Optimize network calls and data processing for better performance.
++ The nominatim.py file demonstrates proper implementation of the requests library to fetch GPS coordinates from a web service. It includes a test case with assert statements.
++ The wildlife.py file retrieves species lists from a web service using the requests library with retry logic for potential errors. However, functionality needs completion for retrieving specific sightings based on TaxonID.
++ The sighting.py file utilizes functions from other modules and implements sorting for displaying animal sightings.
++ The sightings.py file utilizes functions like display menu, display sightings and display venomous <br />
+By focusing on web service integration,  error handling, and completing functionalities like displaying sightings based on TaxonID, the application can achieve a more robust and feature-rich state.
 
 ---
 
@@ -95,18 +96,5 @@ This assignment provided a valuable learning experience in developing a Python a
 
 ---
 
-### Appendices
-
-- **Appendix A: Code Listings**
-  - [sighting.py](#)
-  - [nominatim.py](#)
-  - [wildlife.py](#)
-
-- **Appendix B: Screenshots**
-  - Screenshots of the application running various commands.
-
----
-
-**Note**: Replace placeholders such as `[Your Name]`, `[Your Student ID]`, and links in the appendices with actual content and data.
 
 
